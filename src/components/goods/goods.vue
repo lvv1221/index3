@@ -34,12 +34,14 @@
         </li>
       </ul>
     </div>
+    <shopcart :delivery-price="seller.deliveryPrice" :min-price="seller.minPrice"></shopcart>
   </div>
 </template>
 
 <script>
   import axios from 'axios'
   import BScroll from 'better-scroll'
+  import shopcart from '../shopcart/shopcart'
   const ERR_OK = 0
   export default{
     name: 'goods',
@@ -113,6 +115,9 @@
           this.listHeight.push(height)
         }
       }
+    },
+    components: {
+      shopcart
     }
   }
 </script>
