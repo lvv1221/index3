@@ -4,9 +4,10 @@ var path = require('path')
 module.exports = {
   build: {
     env: require('./prod.env'),
+    port: 9000,
     index: path.resolve(__dirname, '../dist/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
-    assetsSubDirectory: 'static',
+    assetsSubDirectory: 'static', // 调用utils.js里的方法
     assetsPublicPath: './',
     productionSourceMap: true,
     // Gzip off by default as many popular static hosts such as
